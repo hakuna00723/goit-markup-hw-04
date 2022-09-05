@@ -345,31 +345,31 @@ img {
 }
 .clients-list {
   display: flex;
-  flex-wrap: wrap;
   gap: 30px;
 }
-.clients-link:hover .client-icon-bcgr,
-.clients-link:focus .client-icon-bcgr {
-  border-color: var(--blue-cl);
-}
 
-.client-icon-bcgr:hover .client-icon,
-.client-icon-bcgr:focus .client-icon {
-  fill: var(--blue-cl);
-}
-
-.client-icon-bcgr {
-  display: flex;
+.clients-list-item {
   width: 170px;
   height: 92px;
+}
+
+.clients-link {
+  display: flex;
   border: 1px solid var(--gray-icon);
   border-radius: 4px;
-  border-radius: 4px;
-  align-items: center;
   justify-content: center;
 }
+
 .client-icon {
   fill: var(--gray-icon);
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--blue-cl);
+}
+.client-icon:hover,
+.client-icon:focus {
+  fill: var(--blue-cl);
 }
 
 /* FOOTER */

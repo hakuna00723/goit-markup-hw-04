@@ -355,21 +355,22 @@ img {
 
 .clients-link {
   display: flex;
+  color: var(--gray-icon);
   border: 1px solid var(--gray-icon);
   border-radius: 4px;
+  height: inherit;
+  align-items: center;
   justify-content: center;
 }
 
-.client-icon {
-  fill: var(--gray-icon);
-}
 .clients-link:hover,
 .clients-link:focus {
+  color: var(--blue-cl);
   border-color: var(--blue-cl);
 }
-.client-icon:hover,
-.client-icon:focus {
-  fill: var(--blue-cl);
+
+.client-icon {
+  fill: currentColor;
 }
 
 /* FOOTER */
@@ -439,12 +440,16 @@ img {
   display: flex;
   gap: 10px;
 }
-.footer-socials-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.footer-socials-item {
   width: 44px;
   height: 44px;
+}
+.footer-socials-link {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
   background: var(--footer-icon-bcgr);
   border-radius: 50%;
 }
@@ -504,11 +509,6 @@ img {
   width: 370px;
 }
 
-.gallery-list-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
 /* ЛАМАЄТЬСЯ СІТКА!!! 
  При розрахуванні за формулою додає незрозумілий,
  лівий маржин до картинки,
@@ -517,6 +517,17 @@ img {
 /* .gallery-list-item {
   flex-basis: calc((100%-30px * 2) / 3);
 } */
+
+.gallery-link {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.gallery-link:hover,
+.gallery-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
 .gallery-txt {
   padding: 20px 24px;

@@ -25,6 +25,10 @@
   /* Border colors */
   --header-brdr-cl: #ececec;
   --cards-brdr-cl: #eeeeee;
+
+  /* Variables of elements in grid (Portfolio)*/
+  --items: 3;
+  --indent: 30px;
 }
 
 /**
@@ -506,17 +510,8 @@ img {
 }
 
 .gallery-list-item {
-  width: 370px;
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
 }
-
-/* ЛАМАЄТЬСЯ СІТКА!!! 
- При розрахуванні за формулою додає незрозумілий,
- лівий маржин до картинки,
- розтягуючи лішку до 390px (має бути 370px) */
-
-/* .gallery-list-item {
-  flex-basis: calc((100%-30px * 2) / 3);
-} */
 
 .gallery-link {
   display: inline-block;
